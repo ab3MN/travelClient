@@ -1,0 +1,21 @@
+.press__button {
+  color: #fff;
+  background-color: var(--pink-color);
+  border: none;
+  border-radius: 40px;
+  line-height: 1.43;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 18px 40px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 0 var(--red-color);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  &:hover,
+  :focus {
+    cursor: pointer;
+    box-shadow: none;
+    margin-top: 5px;
+  }
+}

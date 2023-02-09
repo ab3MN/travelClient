@@ -1,0 +1,115 @@
+.deals__list {
+  width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  /* ==================== LIST TITLE ==================== */
+  &--title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    margin: 16px 0px 12px 0px;
+    padding: 0px 16px;
+    & a {
+      color: var(--black-color);
+      &:hover {
+        color: var(--pink-color);
+      }
+    }
+  }
+  /* ==================== LIST ITEM ==================== */
+  &--item {
+    width: 370px;
+    background-color: var(--white-color);
+    height: 620px;
+    border-radius: 30px;
+    & img {
+      display: block;
+      margin: 0 auto;
+      width: 340px;
+      height: 254px;
+      border-radius: 30px;
+      margin-top: 15px;
+      transition: all 0.35s linear;
+      object-fit: cover;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  /* ==================== LIST TEXT ==================== */
+  &--text {
+    color: rgba(18, 58, 50, 0.5);
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0px 16px;
+  }
+  /* ==================== LIST INFO ==================== */
+  &--info {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-around;
+    width: calc(100% - 30px);
+  }
+
+  /* ==================== LIST HR ==================== */
+  &--hr {
+    height: 1px;
+    margin: 10px 16px;
+    background-color: rgba(66, 135, 121, 0.1);
+    width: calc(100% - 30px);
+  }
+
+  /* ==================== LIST FOOTER ==================== */
+  &--footer {
+    display: flex;
+    padding: 10px 16px 10px;
+    position: relative;
+    & p {
+      position: absolute;
+      font-size: 24px;
+      font-weight: 600;
+      top: 25px;
+      color: #123a32;
+    }
+  }
+}
+/* ==================== TOUR ITEM ==================== */
+.deal__tour--item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 125px;
+
+  /* ==================== TOUR TITLE ==================== */
+  & h6 {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--black-color);
+  }
+  /* ==================== TOUR TEXT ==================== */
+  & p {
+    color: #889c98;
+    line-height: 1.5;
+    letter-spacing: 0.16px;
+    font-size: 14px;
+  }
+}
+/* ==================== LIST IMG ==================== */
+.deals__list--img__box {
+  position: relative;
+  padding: 5px 0 10px;
+  overflow: hidden;
+}
+.deals__list--item .img__box--title {
+  z-index: 999;
+  color: var(--white-color);
+  border-radius: 0px 8px 8px 0px;
+  position: absolute;
+  top: 10%;
+  font-size: 14px;
+  padding: 6px 8px;
+  font-weight: 600;
+  line-height: 1.43;
+  letter-spacing: 1px;
+}

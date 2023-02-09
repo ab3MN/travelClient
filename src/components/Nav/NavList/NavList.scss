@@ -1,0 +1,23 @@
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 50px;
+  &--item {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  &--link {
+    color: var(--black-color);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--pink-color);
+    }
+  }
+}
+
+.nav__active {
+  color: var(--pink-color);
+}
