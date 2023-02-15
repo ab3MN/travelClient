@@ -1,31 +1,39 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import logger from 'redux-logger';
-import ReduxThunk from 'redux-thunk';
-import userReducer from './users/userReducer';
-import { persistStore, persistReducer } from 'redux-persist';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import userReducer from './users/userSlice';
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import logger from 'redux-logger';
 
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token'],
+  whitelist: ['refreshToken'],
 };
 
 const rootReducer = combineReducers({
   user: persistReducer(authPersistConfig, userReducer),
 });
 
-const middleWare = [ReduxThunk, logger];
-
-const enchancer =
-  process.env.NODE_ENV === 'development'
-    ? composeWithDevTools(applyMiddleware(...middleWare))
-    : applyMiddleware(...middleWare);
-
-export const store = createStore(rootReducer, enchancer);
+export const store = configureStore({
+  reducer: rootReducer,
+  middleware: getDefaultMiddleware => {
+    return getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }).concat(logger);
+  },
+});
 export const persistor = persistStore(store);
 
-export type RootState = ReturnType<typeof rootReducer>;
-
+export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

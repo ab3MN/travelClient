@@ -12,26 +12,29 @@ import {
 
 import './App.css';
 import AppBar from './AppBar';
-import Deals from './Deals/Deals';
+import { useAppDispatch } from '../hooks/reduxHooks';
+import { userLogIn } from '../redux/users/userServices';
 
-function App() {
+const App = () => {
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    dispatch(userLogIn({ email: 'loredan@ukr.net', password: 'loredan' }));
+  }, [dispatch]);
   return (
     <>
       <AppBar />
-      <main>
-        <Deals />
-      </main>
       <Routes>
-        <Route path='/home' element={<HomePage />} />{' '}
-        <Route path='/destination' element={<DestinationPage />} />{' '}
-        <Route path='/listing' element={<ListingPage />} />{' '}
-        <Route path='/pages' element={<PagesPage />} />{' '}
-        <Route path='/contact' element={<ContactPage />} />{' '}
-        <Route path='/login' element={<LogInPage />} />{' '}
-        <Route path='/signup' element={<SignUpPage />} />
+        <Route path="/" element={<HomePage />} />{' '}
+        <Route path="/destination" element={<DestinationPage />} />{' '}
+        <Route path="/listing" element={<ListingPage />} />{' '}
+        <Route path="/pages" element={<PagesPage />} />{' '}
+        <Route path="/contact" element={<ContactPage />} />{' '}
+        <Route path="/login" element={<LogInPage />} />{' '}
+        <Route path="/signup" element={<SignUpPage />} />
       </Routes>
     </>
   );
-}
+};
 
 export default App;

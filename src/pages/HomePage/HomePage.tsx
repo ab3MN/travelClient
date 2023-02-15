@@ -1,7 +1,6 @@
 import React from 'react';
+import Deals from '../../components/Deals/Deals';
 
-const HomePage = () => {
-  return <div>HomePage</div>;
-};
+const HomePage = () => <Deals />;
 
 export default HomePage;

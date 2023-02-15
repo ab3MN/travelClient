@@ -1,0 +1,62 @@
+.explore {
+  background-image: url('../img/bgc/XL.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 810px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 999;
+}
+
+.explore__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 610px;
+  margin: 0 auto;
+  height: 600px;
+}
+
+.explore__container h3,
+p {
+  color: #fff;
+}
+.explore__container h3 {
+  font-family: 'Caveat';
+  font-size: 100px;
+  text-align: center;
+  padding-top: 170px;
+  padding-bottom: 32px;
+}
+
+.explore__container p {
+  width: 532px;
+  font-weight: 18px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.explore__container button {
+  color: #fff;
+  background-color: var(--hover-color);
+  border: none;
+  border-radius: 40px;
+  line-height: 1.43;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 18px 40px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 0 #df5334;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.explore__container button:hover {
+  cursor: pointer;
+  box-shadow: none;
+  margin-top: 5px;
+}

@@ -1,7 +1,9 @@
 import React from 'react';
-import DealsTitles from './DealsTitles/DealsTitles';
+import SectionTitle from '../../shared/titles/SectionTitle/SectionTitle';
 import './Deals.scss';
 import DealsList from './DealsList/DealsList';
+import SectionDescription from '../../shared/titles/SectionDescription/SectionDescription';
+import ViewButton from '../../shared/Buttons/ViewButton/ViewButton';
 
 const deals = [
   {
@@ -38,10 +40,12 @@ const deals = [
 
 const Deals = () => {
   return (
-    <section className='deals'>
-      <div className='deals__container'>
-        <DealsTitles />
+    <section className="deals">
+      <div className="deals__container">
+        <SectionTitle text="Flash Deals" />
+        <SectionDescription text="We`ve Got Some Great Deals" />
         <DealsList deals={deals} />
+        <ViewButton text="view all details" />
       </div>
     </section>
   );
