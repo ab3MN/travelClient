@@ -10,17 +10,9 @@ import {
   ContactPage,
 } from '../routes/routes';
 
-import './App.css';
 import AppBar from './AppBar';
-import { useAppDispatch } from '../hooks/reduxHooks';
-import { userLogIn } from '../redux/users/userServices';
 
 const App = () => {
-  const dispatch = useAppDispatch();
-
-  React.useEffect(() => {
-    dispatch(userLogIn({ email: 'loredan@ukr.net', password: 'loredan' }));
-  }, [dispatch]);
   return (
     <>
       <AppBar />

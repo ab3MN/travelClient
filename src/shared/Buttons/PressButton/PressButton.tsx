@@ -8,7 +8,7 @@ interface IPressButtonProps {
 
 const PressButton: FC<IPressButtonProps> = ({ name, style }) => {
   return (
-    <button className='press__button' style={{ ...style }}>
+    <button className="press__button" style={{ ...style }}>
       {name}
     </button>
   );

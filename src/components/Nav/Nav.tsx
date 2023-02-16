@@ -3,12 +3,12 @@ import NavList from './NavList/NavList';
 import NavLogo from './NavLogo/NavLogo';
 import NavContacts from './NavContacts/NavContacts';
 
-import './Nav.scss';
+import s from './Nav.module.scss';
 
 const Nav = () => {
   return (
-    <nav className='nav'>
-      <div className='nav__box'>
+    <nav className={s.nav}>
+      <div className={s.nav__box}>
         <NavLogo />
         <NavList />
         <NavContacts />

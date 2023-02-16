@@ -1,9 +1,9 @@
 import React from 'react';
-import SectionTitle from '../../shared/titles/SectionTitle/SectionTitle';
-import './Deals.scss';
+import SectionTitle from '../../../shared/titles/SectionTitle/SectionTitle';
+import s from './Deals.module.scss';
 import DealsList from './DealsList/DealsList';
-import SectionDescription from '../../shared/titles/SectionDescription/SectionDescription';
-import ViewButton from '../../shared/Buttons/ViewButton/ViewButton';
+import SectionDescription from '../../../shared/titles/SectionDescription/SectionDescription';
+import ViewButton from '../../../shared/Buttons/ViewButton/ViewButton';
 
 const deals = [
   {
@@ -40,7 +40,7 @@ const deals = [
 
 const Deals = () => {
   return (
-    <section className="deals">
+    <section className={s.deals}>
       <div className="deals__container">
         <SectionTitle text="Flash Deals" />
         <SectionDescription text="We`ve Got Some Great Deals" />

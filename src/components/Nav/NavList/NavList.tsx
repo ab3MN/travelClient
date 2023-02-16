@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './NavList.scss';
+import s from './NavList.module.scss';
 
 const navPath = [
   { to: '/', name: 'home', id: 1 },
@@ -12,13 +12,13 @@ const navPath = [
 
 const NavList = () => {
   return (
-    <ul className="nav__list">
+    <ul className={s.list}>
       {navPath.map(el => (
-        <li key={el.id} className="nav__list--item">
+        <li key={el.id} className={s.list__item}>
           <NavLink
             to={el.to}
             className={({ isActive }) =>
-              isActive ? 'nav__list--link nav__active' : 'nav__list--link'
+              isActive ? `${s.list__link} ${s.active} ` : `${s.list__link}`
             }
           >
             {el.name}

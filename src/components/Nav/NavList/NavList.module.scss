@@ -1,13 +1,13 @@
-.nav__list {
+.list {
   display: flex;
   justify-content: space-around;
   padding-right: 50px;
-  &--item {
+  &__item {
     font-size: 14px;
     padding: 0 20px;
   }
 
-  &--link {
+  &__link {
     color: var(--black-color);
     font-weight: 600;
     text-transform: uppercase;
@@ -18,6 +18,6 @@
   }
 }
 
-.nav__active {
+.active {
   color: var(--pink-color);
 }

@@ -1,0 +1,66 @@
+.left {
+  width: 41.66666667%;
+  position: relative;
+  margin-top: 50px;
+}
+.text {
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 32px;
+  letter-spacing: normal;
+  color: var(--black-color);
+  margin-bottom: 40px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: url(https://shinetheme.com/travelerdata/solotour/wp-content/themes/traveler/v2/images/icon-solo-testimonial.svg);
+    width: 24px;
+    height: 17px;
+    left: 0px;
+    top: -43px;
+  }
+}
+
+.author {
+  position: relative;
+  margin-left: 55px;
+}
+.meta {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: normal;
+  color: #000000;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 2px;
+    left: -54px;
+    top: 9px;
+    background-color: var(--title-color);
+  }
+}
+.icon {
+  color: var(--orange-color);
+}
+.description {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--gray-color);
+}

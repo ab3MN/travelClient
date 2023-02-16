@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavLogo.scss';
+import s from './NavLogo.module.scss';
 
 const NavLogo = () => {
   return (
-    <Link to='/' className='nav__logo'>
-      <img src='./img/logo/Solo.png' alt='logo' className='nav__logo--img' />
+    <Link to="/" className={s.logo}>
+      <img src="./img/logo/Solo.png" alt="logo" className={s.logo__img} />
     </Link>
   );
 };

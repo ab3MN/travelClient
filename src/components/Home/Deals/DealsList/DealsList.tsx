@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import DealsListItem from '../DealsListItem/DealsListItem';
 import { DealType } from '../DealType';
+import s from './DealsList.module.scss';
 
 interface DealsListProps {
   deals: DealType[] | undefined;
@@ -8,7 +9,7 @@ interface DealsListProps {
 
 const DealsList: FC<DealsListProps> = ({ deals }) => {
   return (
-    <ul className='deals__list'>
+    <ul className={s.list}>
       {deals?.map(
         ({ id, title, imgTitle, text, duration, size, imgSrc, price }) => (
           <li key={id}>
@@ -22,7 +23,7 @@ const DealsList: FC<DealsListProps> = ({ deals }) => {
               price={price}
             />
           </li>
-        )
+        ),
       )}
     </ul>
   );

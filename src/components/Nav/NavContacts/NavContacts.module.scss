@@ -1,26 +1,26 @@
-.nav__contact {
+.contact {
   display: flex;
   width: 530px;
   justify-content: space-around;
   align-items: center;
-  &--item {
+  &__item {
     font-size: 14px;
     font-weight: 500;
     height: 20px;
   }
-  &--link {
+  &__link {
     color: var(--black-color);
   }
-  &--hr {
+  &__hr {
     width: 1.3px;
     height: 22px;
     background-color: var(--dar_blue-color);
   }
 }
-.nav__phone {
+.phone {
   color: var(--pink-color);
   text-decoration: underline;
 }
-.nav__auth:hover {
+.auth:hover {
   color: var(--pink-color);
 }

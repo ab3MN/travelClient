@@ -1,10 +1,10 @@
-.deals__list {
+.list {
   width: 1200px;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   /* ==================== LIST TITLE ==================== */
-  &--title {
+  &__title {
     font-size: 18px;
     font-weight: 600;
     line-height: 26px;
@@ -18,7 +18,7 @@
     }
   }
   /* ==================== LIST ITEM ==================== */
-  &--item {
+  &__item {
     width: 370px;
     background-color: var(--white-color);
     height: 630px;
@@ -32,20 +32,17 @@
       margin-top: 15px;
       transition: all 0.35s linear;
       object-fit: cover;
-      &:hover {
-        transform: scale(1.05);
-      }
     }
   }
   /* ==================== LIST TEXT ==================== */
-  &--text {
+  &__text {
     color: rgba(18, 58, 50, 0.5);
     font-size: 14px;
     line-height: 21px;
     padding: 0px 16px;
   }
   /* ==================== LIST INFO ==================== */
-  &--info {
+  &__info {
     padding: 0 16px;
     display: flex;
     justify-content: space-around;
@@ -53,7 +50,7 @@
   }
 
   /* ==================== LIST HR ==================== */
-  &--hr {
+  &__hr {
     height: 1px;
     margin: 10px 16px;
     background-color: rgba(66, 135, 121, 0.1);
@@ -61,7 +58,7 @@
   }
 
   /* ==================== LIST FOOTER ==================== */
-  &--footer {
+  &__footer {
     display: flex;
     padding: 10px 16px 10px;
     position: relative;
@@ -75,7 +72,7 @@
   }
 }
 /* ==================== TOUR ITEM ==================== */
-.deal__tour--item {
+.tour__item {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -96,12 +93,12 @@
   }
 }
 /* ==================== LIST IMG ==================== */
-.deals__list--img__box {
+.img__box {
   position: relative;
   padding: 5px 0 10px;
   overflow: hidden;
 }
-.deals__list--item .img__box--title {
+.list__item .img__title {
   z-index: 999;
   color: var(--white-color);
   border-radius: 0px 8px 8px 0px;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CalendarSvg from '../../../shared/SVG/CalendarSvg';
-import { getRandomLightColor } from '../../../helpers/getRandomLightColor';
-import './DealsListItem.scss';
-import GroupSvg from '../../../shared/SVG/GroupSvg';
-import PressButton from '../../../shared/Buttons/PressButton/PressButton';
+import CalendarSvg from '../../../../shared/SVG/CalendarSvg';
+import { getRandomLightColor } from '../../../../helpers/getRandomLightColor';
+import s from './DealsListItem.module.scss';
+import GroupSvg from '../../../../shared/SVG/GroupSvg';
+import PressButton from '../../../../shared/Buttons/PressButton/PressButton';
 
 const DealsListItem = ({
   title = '',
@@ -16,26 +16,27 @@ const DealsListItem = ({
   price = '',
 }) => {
   return (
-    <article className='deals__list--item'>
-      <div className='deals__list--img__box'>
+    <article className={s.list__item}>
+      <div className={s.img__box}>
         <div
-          className='img__box--title '
-          style={{ backgroundColor: getRandomLightColor() }}>
+          className={s.img__title}
+          style={{ backgroundColor: getRandomLightColor() }}
+        >
           {imgTitle}
         </div>
-        <Link to=''>
+        <Link to="">
           <img src={imgSrc} alt={imgTitle} />
         </Link>
       </div>
-      <h5 className='deals__list--title'>
-        <Link to=''>{title}</Link>
+      <h5 className={s.list__title}>
+        <Link to="">{title}</Link>
       </h5>
-      <p className='deals__list--text'>{text}</p>
-      <div className='deals__list--hr'></div>{' '}
+      <p className={s.list__text}>{text}</p>
+      <div className={s.list__hr}></div>{' '}
       {/* ==================== INFO ==================== */}
-      <div className='deals__list--info'>
-        <div className='deal__tour--item'>
-          <div className='svg__box'>
+      <div className={s.list__info}>
+        <div className={s.tour__item}>
+          <div className={s.svg__box}>
             <CalendarSvg />
           </div>
           <div>
@@ -43,8 +44,8 @@ const DealsListItem = ({
             <p>{duration}</p>
           </div>
         </div>
-        <div className='deal__tour--item'>
-          <div className='svg__box'>
+        <div className={s.tour__item}>
+          <div className={s.svg__box}>
             <GroupSvg />{' '}
           </div>
           <div>
@@ -53,11 +54,11 @@ const DealsListItem = ({
           </div>
         </div>
       </div>
-      <div className='deals__list--hr'></div>
-      <div className='deals__list--footer'>
+      <div className={s.list__hr}></div>
+      <div className={s.list__footer}>
         <p>€{price}</p>
         <PressButton
-          name='book now'
+          name="book now"
           style={{
             padding: '16px 23px',
             position: 'absolute',

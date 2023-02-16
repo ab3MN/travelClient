@@ -16,7 +16,6 @@ export const userLogIn = createAsyncThunk(
         'http://localhost:5000/users/login',
         userData,
       );
-      console.log(data.refreshToken);
       setToken(data.refreshToken);
       return data;
     } catch (e) {

@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './SectionDescription.scss';
 
-const SectionDescription = ({ text = '' }) => (
-  <h3 className="section__description">{text}</h3>
+interface IProps {
+  text: string;
+  style?: any;
+}
+
+const SectionDescription: FC<IProps> = ({ text, style }) => (
+  <h3 className="section__description" style={{ ...style }}>
+    {text}
+  </h3>
 );
 
 export default SectionDescription;
