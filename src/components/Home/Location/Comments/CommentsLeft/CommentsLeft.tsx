@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { FC } from 'react';
 import s from './CommentsLeft.module.scss';
 
-const CommentsLeft = () => {
+interface IProps {
+  text: string;
+  author: string;
+  description: string;
+  stars: number;
+}
+
+const CommentsLeft: FC<IProps> = ({ text, author }) => {
   return (
     <div className={s.left}>
-      <p className={s.text}>
-        Since 2014, we've helped more than 500,000 people of all ages enjoy the
-        best outdoor experience of their lives. Whether it's for one day or a
-        two-week vacation.
-      </p>
+      <p className={s.text}>{text}</p>
       <div className={s.author}>
         <div className={s.meta}>
-          <span className={s.name}>Minh Chau</span>
+          <span className={s.name}>{author}</span>
           <div className={s.icon__box}>
             <i className={`${'fa fa-star'} ${s.icon}`}></i>
             <i className={`${'fa fa-star'} ${s.icon}`}></i>

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
 import s from './CommentsRight.module.scss';
 
-const CommentsRight = () => {
+interface IProps {
+  img: string;
+  alt: string;
+}
+
+const CommentsRight: FC<IProps> = ({ img, alt }) => {
   return (
     <div className={s.img__box}>
-      <img src="./img/location/Girl.png" alt="girl" className={s.img} />
+      <img src={img} alt={alt} className={s.img} />
     </div>
   );
 };

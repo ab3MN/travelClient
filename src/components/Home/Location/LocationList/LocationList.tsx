@@ -20,7 +20,10 @@ const LocationList = () => {
           </li>
         ))}
       </ul>
-      <ViewButton text="VIEW ALL DESTINATIONS" />
+      <ViewButton
+        text="VIEW ALL DESTINATIONS"
+        style={{ margin: '50px auto 100px' }}
+      />
     </>
   );
 };

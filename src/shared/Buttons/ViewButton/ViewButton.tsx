@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './ViewButton.scss';
 
-const ViewButton = ({ text = '' }) => (
-  <button className="view__button">{text}</button>
+interface IProps {
+  text: string;
+  style?: any;
+}
+
+const ViewButton: FC<IProps> = ({ text, style }) => (
+  <button className="view__button" style={style}>
+    {text}
+  </button>
 );
 
 export default ViewButton;

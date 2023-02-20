@@ -2,7 +2,8 @@ import React from 'react';
 import Deals from './Deals/Deals';
 import Title from './Tittle/Title';
 import Location from './Location/Location';
-import Comments from './Location/Comments/Comments';
+import About from './About/About';
+import News from './News/News';
 
 const Home = () => {
   return (
@@ -10,7 +11,8 @@ const Home = () => {
       <Title />
       <Deals />
       <Location />
-      <Comments />
+      <About />
+      <News />
     </>
   );
 };
