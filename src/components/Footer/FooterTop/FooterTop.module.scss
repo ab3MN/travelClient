@@ -1,0 +1,53 @@
+.top {
+  width: 100%;
+  background-color: var(--orange-color);
+  height: 400px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+
+  & label {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    margin-top: 0px;
+    position: relative;
+    text-align: center;
+    &::before {
+      content: url('../../../../public/img/footer/tg.png');
+      position: absolute;
+      left: 50%;
+      top: -64px;
+      transform: translateX(-50%);
+    }
+  }
+  & input {
+    min-width: 370px;
+    border: none;
+    outline: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    background-color: #cc7917;
+    margin-bottom: 20px;
+    &:focus {
+      cursor: auto;
+    }
+    &::placeholder {
+      color: rgb(238, 238, 238);
+    }
+  }
+}
+
+.input__box {
+  margin-bottom: 20px;
+}

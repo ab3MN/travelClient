@@ -11,6 +11,7 @@ import {
 } from '../routes/routes';
 
 import AppBar from './AppBar';
+import Footer from './Footer/Footer';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/login" element={<LogInPage />} />{' '}
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
+      <Footer />
     </>
   );
 };

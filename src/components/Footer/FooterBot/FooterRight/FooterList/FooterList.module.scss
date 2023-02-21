@@ -1,0 +1,25 @@
+.list {
+  width: 270px;
+  color: white;
+  & h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+  }
+}
+.item {
+  padding: 10px 0px;
+  & a {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 21px;
+    color: white;
+    &:hover,
+    :focus {
+      cursor: pointer;
+      color: var(--orange-color);
+    }
+  }
+}

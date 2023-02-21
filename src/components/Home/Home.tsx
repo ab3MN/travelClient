@@ -4,6 +4,7 @@ import Title from './Tittle/Title';
 import Location from './Location/Location';
 import About from './About/About';
 import News from './News/News';
+import Multi from './Multi/Multi';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Location />
       <About />
       <News />
+      <Multi />
     </>
   );
 };

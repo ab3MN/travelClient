@@ -1,0 +1,55 @@
+.left {
+  width: 270px;
+  height: 300px;
+  & h4 {
+    font-family: 'Caveat';
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: -0.8px;
+    color: #ffffff;
+    margin-bottom: 42px;
+    margin-top: 10px;
+  }
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 5px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  & select {
+    border-radius: 40px;
+    background-color: #350a4f;
+    opacity: 0.8;
+    height: auto !important;
+    outline: none;
+    border-color: transparent;
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 15px 24px;
+    width: 200px;
+    outline: none;
+  }
+  & option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    background: var(--white-color);
+  }
+}
+.img__box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}

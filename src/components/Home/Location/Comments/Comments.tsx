@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import s from './Comments.module.scss';
 import CommentsLeft from './CommentsLeft/CommentsLeft';
 import CommentsRight from './CommentsRight/CommentsRight';
+import './Swiper.scss';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
@@ -27,12 +28,14 @@ const Comments: FC<IProps> = ({ data }) => {
       modules={[Pagination]}
       spaceBetween={50}
       slidesPerView={1}
-      pagination={{ clickable: true }}
+      pagination={{
+        clickable: true,
+        bulletClass: `swiper-pagination-bullet swiper-pagination-testClass`,
+      }}
       loop={true}
     >
       {data.map(({ text, alt, id, author, description, stars, img }) => (
         <SwiperSlide key={id}>
-          {' '}
           <article className={s.artcile}>
             <CommentsLeft
               text={text}
