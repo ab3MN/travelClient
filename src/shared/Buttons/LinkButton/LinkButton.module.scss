@@ -1,0 +1,14 @@
+.button {
+  text-decoration: none;
+  padding-left: 5px;
+  border: none;
+  background: none;
+  color: var(--pink-color);
+  transition: all 0.35s ease-in-out;
+  font-weight: 600;
+  &:hover {
+    color: var(--blue-color);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

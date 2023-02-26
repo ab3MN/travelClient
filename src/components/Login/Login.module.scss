@@ -1,0 +1,33 @@
+.description {
+  font-size: 14px;
+  line-height: 1.43;
+  color: rgba(18, 58, 50, 0.5);
+  display: block;
+  padding: 0px 20px;
+  text-align: center;
+}
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  color: var(--text-color);
+  padding-bottom: 10px;
+}
+.checkbox__box {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 20px;
+}
+.checkbox__label {
+  font-size: 14px;
+  line-height: 1.43;
+  color: #000 !important;
+}
+
+.link__box {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.43;
+}

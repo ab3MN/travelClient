@@ -4,6 +4,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { setToken, clearToken } from '../../helpers/token';
 
 type userData = {
+  name?: string;
+  fullName?: string;
   email: string;
   password: string;
 };
@@ -42,11 +44,16 @@ export const userSignUp = createAsyncThunk(
 
 export const userAuth = createAsyncThunk(
   'user/auth',
-  async (_, { rejectWithValue }) => {
+  async (token: { refreshToken: string }, { rejectWithValue }) => {
     try {
+      setToken(token.refreshToken);
+
       const { data } = await axios.get<IUserWithToken>(
         'http://localhost:5000/users/auth',
       );
+
+      clearToken();
+
       return data;
     } catch (e) {
       return rejectWithValue('Auth User with Error');

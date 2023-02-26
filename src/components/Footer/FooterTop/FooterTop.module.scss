@@ -27,7 +27,7 @@
     }
   }
   & input {
-    min-width: 370px;
+    width: 320px;
     border: none;
     outline: none;
     padding: 12px 24px;
@@ -44,6 +44,9 @@
     }
     &::placeholder {
       color: rgb(238, 238, 238);
+    }
+    &:first-child {
+      margin-right: 30px;
     }
   }
 }

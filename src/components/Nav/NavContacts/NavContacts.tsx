@@ -1,13 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import authContext from '../../AppBar.contex';
 import s from './NavContacts.module.scss';
 
-const navAuth = [
-  { to: '/login', name: 'Log In', id: 3 },
-  { to: '/signup', name: 'Sign Up', id: 4 },
-];
-
 const NavContacts = () => {
+  const { setLogInOpen, setSignUpOpen } = React.useContext(authContext);
   return (
     <ul className={s.contact}>
       {' '}
@@ -34,13 +30,24 @@ const NavContacts = () => {
         </a>
       </li>
       <div className={s.contact__hr}></div>
-      {navAuth.map(el => (
-        <li key={el.id} className={s.contact__item}>
-          <NavLink to={el.to} className={`${s.contact__link} ${s.auth}`}>
-            {el.name}
-          </NavLink>
-        </li>
-      ))}
+      <li className={s.contact__item} key={3}>
+        <button
+          type="button"
+          className={`${s.contact__link} ${s.auth}`}
+          onClick={() => setLogInOpen(true)}
+        >
+          Login
+        </button>{' '}
+      </li>
+      <li className={s.contact__item} key={4}>
+        <button
+          type="button"
+          className={`${s.contact__link} ${s.auth}`}
+          onClick={() => setSignUpOpen(true)}
+        >
+          Sign Up
+        </button>
+      </li>
     </ul>
   );
 };

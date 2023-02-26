@@ -21,6 +21,18 @@
   color: var(--pink-color);
   text-decoration: underline;
 }
-.auth:hover {
-  color: var(--pink-color);
+.auth {
+  color: var(--black-color);
+  border: none;
+  background: none;
+  font-weight: 600;
+  height: 20px;
+  letter-spacing: 1.2px;
+  &:hover {
+    color: var(--pink-color);
+  }
+}
+
+.auth__box {
+  display: flex;
 }

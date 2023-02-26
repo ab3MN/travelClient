@@ -1,23 +1,18 @@
 import { lazy } from 'react';
 
-/* ==================== AUTH ==================== */
-export const LogInPage = lazy(() => import('../pages/LogInPage/LoginPage'));
-
-export const SignUpPage = lazy(() => import('../pages/SignUpPage/SignUpPage'));
-
 /* ==================== DESTINATION ==================== */
 export const DestinationPage = lazy(
-  () => import('../pages/DestinationPage/DestinationPage')
+  () => import('../pages/DestinationPage/DestinationPage'),
 );
 
 /* ==================== CONTACT ==================== */
 export const ContactPage = lazy(
-  () => import('../pages/ContactPage/ContactPage')
+  () => import('../pages/ContactPage/ContactPage'),
 );
 
 /* ==================== LISTING ==================== */
 export const ListingPage = lazy(
-  () => import('../pages/ListingPage/ListingPage')
+  () => import('../pages/ListingPage/ListingPage'),
 );
 
 /* ==================== PAGES ==================== */

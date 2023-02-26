@@ -16,6 +16,8 @@
     font-weight: 600;
     line-height: 21px;
     color: white;
+    transition: all 0.35s ease-in-out;
+
     &:hover,
     :focus {
       cursor: pointer;

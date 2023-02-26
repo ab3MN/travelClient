@@ -32,7 +32,7 @@ const FooterLeft = () => {
         <label htmlFor="" className={s.label}>
           Currencies
         </label>{' '}
-        <select defaultValue="USD" onChange={() => console.log('aaa')}>
+        {/* <select defaultValue="USD" onChange={() => console.log('aaa')}>
           <option selected={false} value="USD" style={{ color: '#1a2b48' }}>
             USD
           </option>
@@ -42,7 +42,7 @@ const FooterLeft = () => {
           <option selected={false} value="AUD">
             AUD
           </option>
-        </select>
+        </select> */}
         <div className={s.img__box}>
           {Icons.map(({ src, id, href }) => (
             <a href={href} target="_blank" rel="noreferrer" key={id}>

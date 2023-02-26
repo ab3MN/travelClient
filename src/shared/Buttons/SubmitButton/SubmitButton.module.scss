@@ -1,0 +1,21 @@
+.button {
+  font-size: 14px;
+  width: 320px;
+  height: 45px;
+  font-weight: 600;
+  line-height: 1.43;
+  letter-spacing: 1px;
+  color: var(--white-color);
+  border-radius: 24px;
+  background-color: var(--pink-color);
+  border: none;
+  outline: none;
+  margin-bottom: 25px;
+  transition: all 0.35s ease-in-out;
+
+  &:hover,
+  :focus {
+    cursor: pointer;
+    background-color: var(--blue-color);
+  }
+}

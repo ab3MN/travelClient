@@ -1,8 +1,8 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: #fff;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
@@ -43,6 +43,10 @@ p {
   margin: 0;
   padding: 0;
 }
+button:hover,
+a:hover {
+  cursor: pointer;
+}
 
 :root {
   --pink-color: #ec927e;
@@ -51,7 +55,9 @@ p {
   --orange-color: #f2911f;
   --light_gray-color: #9ed2e0;
   --gray-color: #889c98;
+  --dark-gray_color: #4e4e4e;
   --dar_blue-color: #1a2b48;
   --red-color: #df5334;
   --white-color: #fff;
+  --blue-color: #5191fa;
 }
