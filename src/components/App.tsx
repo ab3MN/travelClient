@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../hooks/reduxHooks';
-// import { userAuth } from '../redux/users/userServices';
+import { userAuth } from '../redux/users/userServices';
 import {
   HomePage,
   DestinationPage,
@@ -19,7 +19,7 @@ const App = () => {
 
   React.useEffect(() => {
     if (!refreshToken) return;
-    // dispatch(userAuth({ refreshToken }));
+    dispatch(userAuth({ refreshToken }));
   }, [dispatch, refreshToken]);
   return (
     <>

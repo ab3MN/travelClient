@@ -4,15 +4,17 @@ import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import App from './components/App';
 import { store, persistor } from './redux/store';
+import MyLoader from './shared/MyLoader/MyLoader';
 
 const Root = () => {
   return (
     <React.StrictMode>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<MyLoader />}>
         <Provider store={store}>
           <PersistGate
-            loading={<h1>Loading...</h1>}
-            persistor={persistor}></PersistGate>{' '}
+            loading={<MyLoader />}
+            persistor={persistor}
+          ></PersistGate>{' '}
           <BrowserRouter>
             <App />
           </BrowserRouter>

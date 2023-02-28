@@ -83,7 +83,6 @@ const Login = () => {
           <LinkButton text="Create an Account" callback={handleSignUpOpen} />
         </div>
       </AuthForm>
-
       {message.length > 0 && <MessageInformer message={message} />}
     </FormSection>
   );

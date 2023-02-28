@@ -34,6 +34,7 @@ export const userSlice = createSlice({
       state.isLoading = false;
       state.user = action.payload.user;
       state.refreshToken = action.payload.refreshToken;
+      state.auth = true;
     },
     [userLogIn.rejected.type]: (state, action: PayloadAction<string>) => {
       state.isLoading = false;
@@ -51,6 +52,7 @@ export const userSlice = createSlice({
       state.isLoading = false;
       state.user = action.payload.user;
       state.refreshToken = action.payload.refreshToken;
+      state.auth = true;
     },
     [userSignUp.rejected.type]: (state, action: PayloadAction<string>) => {
       state.isLoading = false;
@@ -64,6 +66,7 @@ export const userSlice = createSlice({
     [userAuth.fulfilled.type]: (state, action: PayloadAction<IUser>) => {
       state.isLoading = false;
       state.user = action.payload;
+      state.auth = true;
     },
     [userAuth.rejected.type]: (state, action: PayloadAction<string>) => {
       state.isLoading = false;
@@ -73,12 +76,14 @@ export const userSlice = createSlice({
     /* ==================== LOG OUT ==================== */
     [userLogOut.pending.type]: () => {},
     [userLogOut.fulfilled.type]: state => {
-      state.isLoading = false;
+      state.isLoading = true;
       state.refreshToken = null;
       state.user = null;
+      state.auth = false;
     },
     [userLogOut.rejected.type]: (state, action: PayloadAction<string>) => {
       state.error = action.payload;
+      state.refreshToken = null;
     },
   },
 });

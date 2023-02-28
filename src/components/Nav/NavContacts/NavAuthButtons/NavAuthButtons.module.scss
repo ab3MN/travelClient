@@ -1,0 +1,19 @@
+.item {
+  font-size: 14px;
+  font-weight: 500;
+  height: 20px;
+}
+.link {
+  color: var(--black-color);
+}
+.auth {
+  color: var(--black-color);
+  border: none;
+  background: none;
+  font-weight: 600;
+  height: 20px;
+  letter-spacing: 1.2px;
+  &:hover {
+    color: var(--pink-color);
+  }
+}

@@ -1,12 +1,13 @@
 import React from 'react';
-import authContext from '../../AppBar.contex';
 import s from './NavContacts.module.scss';
+import { useAppSelector } from '../../../hooks/reduxHooks';
+import NavAuthButtons from './NavAuthButtons/NavAuthButtons';
+import NavAuthInfo from './NavAuthInfo/NavAuthInfo';
 
 const NavContacts = () => {
-  const { setLogInOpen, setSignUpOpen } = React.useContext(authContext);
+  const { auth, user } = useAppSelector(s => s.user);
   return (
     <ul className={s.contact}>
-      {' '}
       <li className={s.contact__item} key={1}>
         <a
           href="/"
@@ -14,7 +15,6 @@ const NavContacts = () => {
           target="_blank"
           rel="noreferrer"
         >
-          {' '}
           contact@travelerwp.com{' '}
         </a>
       </li>
@@ -25,29 +25,15 @@ const NavContacts = () => {
           target="_blank"
           rel="noreferrer"
         >
-          {' '}
           +12 43223354{' '}
         </a>
       </li>
       <div className={s.contact__hr}></div>
-      <li className={s.contact__item} key={3}>
-        <button
-          type="button"
-          className={`${s.contact__link} ${s.auth}`}
-          onClick={() => setLogInOpen(true)}
-        >
-          Login
-        </button>{' '}
-      </li>
-      <li className={s.contact__item} key={4}>
-        <button
-          type="button"
-          className={`${s.contact__link} ${s.auth}`}
-          onClick={() => setSignUpOpen(true)}
-        >
-          Sign Up
-        </button>
-      </li>
+      {auth ? (
+        <NavAuthInfo avatar={user?.avatar} name={user?.email} />
+      ) : (
+        <NavAuthButtons />
+      )}
     </ul>
   );
 };
