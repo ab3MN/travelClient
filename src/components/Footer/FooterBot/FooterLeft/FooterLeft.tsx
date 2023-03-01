@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './FooterLeft.module.scss';
+import FooterSelector from './FooterSelector/FooterSelector';
 
 const Icons = [
   {
@@ -32,6 +33,7 @@ const FooterLeft = () => {
         <label htmlFor="" className={s.label}>
           Currencies
         </label>{' '}
+        <FooterSelector />
         {/* <select defaultValue="USD" onChange={() => console.log('aaa')}>
           <option selected={false} value="USD" style={{ color: '#1a2b48' }}>
             USD

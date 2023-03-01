@@ -2,8 +2,12 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import s from './NavAuthMenu.module.scss';
 import { useOutsideClose } from '../../../../../hooks/useOutsideClose';
-import { useAppDispatch } from '../../../../../hooks/reduxHooks';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from '../../../../../hooks/reduxHooks';
 import { userLogOut } from '../../../../../redux/users/userServices';
+import { useCloseByEscPress } from '../../../../../hooks/useCloseByEscPress';
 
 interface IProps {
   onClose: () => void;
@@ -12,19 +16,10 @@ interface IProps {
 const NavAuthMenu: FC<IProps> = ({ onClose }) => {
   const ulRef = React.useRef(null);
   useOutsideClose(ulRef, onClose);
+  useCloseByEscPress(onClose);
+
   const dispatch = useAppDispatch();
-
-  React.useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) =>
-      e.code !== 'Escape' ? undefined : onClose();
-
-    window.addEventListener('keydown', handleKeyPress);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-      window.removeEventListener('click', onClose);
-    };
-  }, [onClose]);
+  const { refreshToken } = useAppSelector(s => s.user);
 
   return (
     <ul className={s.menu} ref={ulRef}>
@@ -35,7 +30,10 @@ const NavAuthMenu: FC<IProps> = ({ onClose }) => {
         <Link to="/">Boking History</Link>
       </li>
       <div className={s.hr}></div>
-      <li className={s.item} onClick={() => dispatch(userLogOut())}>
+      <li
+        className={s.item}
+        onClick={() => refreshToken && dispatch(userLogOut({ refreshToken }))}
+      >
         <Link to="/">Log Out</Link>
       </li>
     </ul>

@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+}
+.select {
+  display: block;
+  width: 145px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--white-color);
+  padding: 12px 24px;
+  outline: none;
+  border-radius: 20px;
+  background-color: #350a4f;
+  height: auto !important;
+  &:focus,
+  :hover {
+    cursor: pointer;
+  }
+}
+.arrow {
+  position: relative;
+  & b::after {
+    position: absolute;
+    content: '\f107';
+    top: -4px;
+    left: 140px;
+    font-family: FontAwesome, sans-serif;
+    font-size: 14px;
+    color: white;
+  }
+}
+
+.list {
+  position: absolute;
+  top: 50px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  padding-inline-start: 0;
+  border-radius: 20px;
+  transition: all 0.35s ease-in-out;
+  width: 193px;
+}
+.item {
+  font-weight: 600;
+  line-height: 1.5;
+  list-style: none;
+  padding: 12px 24px;
+  margin-block-start: 0;
+  & a {
+    color: var(--black-color);
+    text-decoration: none;
+  }
+  &:hover {
+    cursor: pointer;
+    color: var(--pink-color);
+  }
+}

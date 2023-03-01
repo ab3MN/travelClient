@@ -4,20 +4,5 @@
   padding-right: 50px;
   &__item {
     font-size: 14px;
-    padding: 0 20px;
   }
-
-  &__link {
-    color: var(--black-color);
-    font-weight: 600;
-    text-transform: uppercase;
-
-    &:hover {
-      color: var(--pink-color);
-    }
-  }
-}
-
-.active {
-  color: var(--pink-color);
 }

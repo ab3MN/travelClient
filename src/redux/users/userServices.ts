@@ -63,8 +63,9 @@ export const userAuth = createAsyncThunk(
 
 export const userLogOut = createAsyncThunk(
   'user/logout',
-  async (_, { rejectWithValue }) => {
+  async (token: { refreshToken: string }, { rejectWithValue }) => {
     try {
+      setToken(token.refreshToken);
       await axios.get('http://localhost:5000/users/logout');
       clearToken();
     } catch (e) {

@@ -32,6 +32,9 @@
       margin-top: 15px;
       transition: all 0.35s linear;
       object-fit: cover;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
   /* ==================== LIST TEXT ==================== */

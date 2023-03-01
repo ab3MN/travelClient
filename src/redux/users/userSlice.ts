@@ -69,21 +69,23 @@ export const userSlice = createSlice({
       state.auth = true;
     },
     [userAuth.rejected.type]: (state, action: PayloadAction<string>) => {
-      state.isLoading = false;
+      state.isLoading = true;
       state.error = action.payload;
     },
 
     /* ==================== LOG OUT ==================== */
-    [userLogOut.pending.type]: () => {},
-    [userLogOut.fulfilled.type]: state => {
+    [userLogOut.pending.type]: state => {
       state.isLoading = true;
+    },
+    [userLogOut.fulfilled.type]: state => {
       state.refreshToken = null;
       state.user = null;
       state.auth = false;
+      state.isLoading = false;
     },
     [userLogOut.rejected.type]: (state, action: PayloadAction<string>) => {
       state.error = action.payload;
-      state.refreshToken = null;
+      state.isLoading = false;
     },
   },
 });
