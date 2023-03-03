@@ -22,11 +22,11 @@ const NavListItem: FC<IProps> = ({ name, data, to }) => {
         onMouseOut={() => setMenuOpen(false)}
         to={to}
         className={({ isActive }) =>
-          isActive ? `${s.nav__Link} ${s.active} ` : `${s.nav__link}`
+          isActive ? ` ${s.active} ` : `${s.nav__link}`
         }
       >
         {name}
-        {data && <i className={`fa fa-arrow-down `}></i>}
+        {data && <i className="fa fa-arrow-down"></i>}
       </NavLink>
       {isMenuOpen && (
         <ul

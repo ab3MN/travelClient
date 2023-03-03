@@ -5,7 +5,11 @@ import s from './NavLogo.module.scss';
 const NavLogo = () => {
   return (
     <Link to="/" className={s.logo}>
-      <img src="./img/logo/Solo.png" alt="logo" className={s.logo__img} />
+      <img
+        src="./img/NavPage/logo/Solo.png"
+        alt="logo"
+        className={s.logo__img}
+      />
     </Link>
   );
 };

@@ -21,7 +21,9 @@ const NewsListItem: FC<IProps> = ({
   return (
     <div>
       <Link className={s.link} to="/">
-        <img src={img} className={s.img} alt="news__photo" />
+        <div className={s.img__box}>
+          <img src={img} className={s.img} alt="news__photo" />
+        </div>
       </Link>
       <ul className={s.list}>
         <li className={s.text} style={{ color: getRandomLightColor() }}>

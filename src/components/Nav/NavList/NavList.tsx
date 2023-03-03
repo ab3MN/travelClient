@@ -5,7 +5,7 @@ import NavListItem from './NavListItem/NavListItem';
 const navPath = [
   { to: '/', name: 'home', id: 1 },
   {
-    to: '/destination',
+    to: '#',
     name: 'destination',
     id: 2,
     data: [
@@ -16,13 +16,13 @@ const navPath = [
     ],
   },
   {
-    to: '/listing',
+    to: '#',
     name: 'listing',
     id: 3,
     data: [{ name: 'Tour listing ', id: 1, to: '/listing' }],
   },
   {
-    to: '/pages',
+    to: '#',
     name: 'pages',
     id: 4,
     data: [
@@ -32,7 +32,7 @@ const navPath = [
       { name: 'Blog', id: 4, to: '/blog' },
     ],
   },
-  { to: '/contact', name: 'contact', id: 5 },
+  { to: '/contact', name: 'contact us', id: 5 },
 ];
 
 const NavList = () => {

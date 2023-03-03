@@ -17,23 +17,23 @@ const DealsListItem = ({
 }) => {
   return (
     <article className={s.list__item}>
-      <div className={s.img__box}>
+      <Link className={s.link} to="/">
         <div
           className={s.img__title}
           style={{ backgroundColor: getRandomLightColor() }}
         >
           {imgTitle}
         </div>
-        <Link to="">
-          <img src={imgSrc} alt={imgTitle} />
-        </Link>
-      </div>
+        <div className={s.img__box}>
+          <img src={imgSrc} alt="item__photo" className={s.img} />
+        </div>
+      </Link>
       <h5 className={s.list__title}>
         <Link to="">{title}</Link>
       </h5>
       <p className={s.list__text}>{text}</p>
-      <div className={s.list__hr}></div>{' '}
       {/* ==================== INFO ==================== */}
+      <div className={s.list__hr}></div>
       <div className={s.list__info}>
         <div className={s.tour__item}>
           <div className={s.svg__box}>

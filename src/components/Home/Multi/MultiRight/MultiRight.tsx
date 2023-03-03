@@ -5,7 +5,7 @@ const MultiRight = () => {
   return (
     <div className={s.right}>
       <div>
-        <img src="./img/multi/right.png" alt="" />
+        <img src="./img/HomePage/multi/right.png" alt="" />
       </div>
     </div>
   );

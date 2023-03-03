@@ -2,23 +2,20 @@
   position: relative;
 }
 
-.nav__link {
+.nav__link,
+.active {
   position: relative;
   color: var(--black-color);
   font-weight: 600;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 15px;
   & i {
-    padding-left: 3px;
+    padding-left: 5px;
   }
 
   &:hover {
     color: var(--pink-color);
   }
-}
-.active {
-  color: var(--pink-color);
-  text-transform: uppercase;
 }
 
 .list {

@@ -7,7 +7,7 @@ import ViewButton from '../../../shared/Buttons/ViewButton/ViewButton';
 
 const newsList = [
   {
-    img: './img/news/1.png',
+    img: './img/HomePage/news/1.png',
     location: 'THAILAND',
     date: '11 May, 2020',
     title: '10 Thai Customs That Might Suprise You',
@@ -16,7 +16,7 @@ const newsList = [
     id: 1,
   },
   {
-    img: './img/news/2.png',
+    img: './img/HomePage/news/2.png',
     location: 'THAILAND',
     date: '11 May, 2020',
     title: '10 Thai Customs That Might Suprise You',
@@ -25,7 +25,7 @@ const newsList = [
     id: 2,
   },
   {
-    img: './img/news/3.png',
+    img: './img/HomePage/news/3.png',
     location: 'THAILAND',
     date: '11 May, 2020',
     title: '10 Thai Customs That Might Suprise You',

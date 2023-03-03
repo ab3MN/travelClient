@@ -8,14 +8,14 @@ import Multi from './Multi/Multi';
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Title />
       <Deals />
       <Location />
       <About />
       <News />
       <Multi />
-    </>
+    </main>
   );
 };
 

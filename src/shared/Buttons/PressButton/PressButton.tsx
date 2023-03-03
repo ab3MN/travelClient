@@ -4,11 +4,12 @@ import './PressButton.scss';
 interface IPressButtonProps {
   name: string;
   style?: any;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
-const PressButton: FC<IPressButtonProps> = ({ name, style }) => {
+const PressButton: FC<IPressButtonProps> = ({ name, style, type }) => {
   return (
-    <button className="press__button" style={{ ...style }}>
+    <button className="press__button" style={{ ...style }} type={type}>
       {name}
     </button>
   );

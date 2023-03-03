@@ -8,6 +8,7 @@ interface IProps {
   placeholder: string;
   setState: (email: string) => void;
   style?: any;
+  id?: string;
 }
 
 const MyInput: FC<IProps> = ({

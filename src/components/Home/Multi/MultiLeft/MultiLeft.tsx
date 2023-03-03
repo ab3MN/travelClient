@@ -20,7 +20,7 @@ const MultiLeft = () => {
         book! There’s no time limit or expiry date on these savings
       </p>
       <div>
-        <img src="./img/multi/left.png" alt="discount" />
+        <img src="./img/HomePage/multi/left.png" alt="discount" />
       </div>
       <ViewButton
         text="find out more"

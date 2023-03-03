@@ -7,7 +7,7 @@ import LocationList from './LocationList/LocationList';
 
 const ICommentsDB = [
   {
-    img: './img/location/Girl.png',
+    img: './img/HomePage/location/Girl.png',
     alt: 'girl',
     text: "Since 2014, we've helped more than 500,000 people of all ages enjoy the  best outdoor experience of their lives. Whether it's for one days or a two-week vacation.",
     author: 'Minh Chau',
@@ -16,7 +16,7 @@ const ICommentsDB = [
     id: 1,
   },
   {
-    img: './img/location/Girl.png',
+    img: './img/HomePage/location/Girl.png',
     alt: 'girl',
     text: "Since 2014, we've helped more than 500,000 people of all ages enjoy the  best outdoor experience of their lives. Whether it's for one days or a two-week vacation.",
     author: 'Minh Chau',
@@ -25,7 +25,7 @@ const ICommentsDB = [
     id: 2,
   },
   {
-    img: './img/location/Girl.png',
+    img: './img/HomePage/location/Girl.png',
     alt: 'girl',
     text: "Since 2014, we've helped more than 500,000 people of all ages enjoy the  best outdoor experience of their lives. Whether it's for one days or a two-week vacation.",
     author: 'Minh Chau',

@@ -14,7 +14,7 @@ const AboutLeft = () => {
         style={{ textAlign: 'left', paddingLeft: '20px' }}
       />
       <div>
-        <img src="./img/about/img.png" alt="" />
+        <img src="./img/HomePage/about/img.png" alt="" />
       </div>
     </div>
   );

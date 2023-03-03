@@ -8,7 +8,7 @@ import ViewButton from '../../../shared/Buttons/ViewButton/ViewButton';
 const deals = [
   {
     imgTitle: 'VIETNAM',
-    imgSrc: './img/deals/1/XL.png',
+    imgSrc: './img/HomePage/deals/1/XL.png',
     title: 'Sapa Trekking Tours - 2 Days 1 Night Stay At Homesday',
     text: 'Varius massa maecenas et id dictumst mattis. Donec fringilla ac parturient posuere id phasellus erat elementum nullam lacus cursus rhoncus parturient vitae praesent quisque nasceturmolestie quis',
     duration: '2 days',
@@ -18,7 +18,7 @@ const deals = [
   },
   {
     imgTitle: 'THAILAND',
-    imgSrc: './img/deals/2/XL.png',
+    imgSrc: './img/HomePage/deals/2/XL.png',
     title: 'Half-Day Chiang Mail City and Temples Tour Including Doi Suthep',
     text: '  Arius massa maecenas et id dictumst mattis. Donec fringilla ac parturient posuere id phasellus erat elementum nullam lacus cursus rhoncus parturient vitae praesent quisque nascetur molestie quis',
     duration: '6 hours',
@@ -28,7 +28,7 @@ const deals = [
   },
   {
     imgTitle: 'CAMBODIA',
-    imgSrc: './img/deals/3/XL.png',
+    imgSrc: './img/HomePage/deals/3/XL.png',
     title: 'Tourism Paradise Island Koh Rong Cambodia 2 Days 1 Night',
     text: ' Arius massa maecenas et id dictumst mattis. Donec fringilla ac parturient posuere id phasellus erat elementum nullam lacus cursus rhoncus parturient vitae praesent quisque nascetur molestie quis',
     duration: '6 hours',

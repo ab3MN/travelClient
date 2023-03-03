@@ -4,17 +4,17 @@ import s from './AboutRight.module.scss';
 
 const aboutList = [
   {
-    img: './img/about/about__phone.png',
+    img: './img/HomePage/about/about__phone.png',
     text: 'BOOKING WITH SPREAD PAYMENTS',
     id: 1,
   },
   {
-    img: './img/about/about__notebook.png',
+    img: './img/HomePage/about/about__notebook.png',
     text: 'SLEEP & TRAVEL IN COMFORT',
     id: 2,
   },
   {
-    img: './img/about/about__bed.png',
+    img: './img/HomePage/about/about__bed.png',
     text: 'FULLY LICENSED TOUR OPERATOR',
     id: 3,
   },

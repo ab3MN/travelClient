@@ -8,7 +8,7 @@ const NavAuthInfo = ({ avatar = '', name = '' }) => {
   const onClose = () => setMenuOpen(false);
 
   return (
-    <>
+    <div className={s.nav__info}>
       <div className={s.container}>
         <img src={avatar} alt="" className={s.avatar} />
         <span className={s.name} onClick={() => setMenuOpen(!isMenuOpen)}>
@@ -17,7 +17,7 @@ const NavAuthInfo = ({ avatar = '', name = '' }) => {
         </span>
       </div>
       {isMenuOpen && <NavAuthMenu onClose={onClose} />}
-    </>
+    </div>
   );
 };
 

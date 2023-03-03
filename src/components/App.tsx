@@ -2,13 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../hooks/reduxHooks';
 import { userAuth } from '../redux/users/userServices';
-import {
-  HomePage,
-  DestinationPage,
-  ListingPage,
-  PagesPage,
-  ContactPage,
-} from '../routes/routes';
+import { HomePage, ContactPage, AboutPage } from '../routes/routes';
 
 import AppBar from './AppBar';
 import Footer from './Footer/Footer';
@@ -26,9 +20,7 @@ const App = () => {
       <AppBar />
       <Routes>
         <Route path="/" element={<HomePage />} />{' '}
-        <Route path="/destination" element={<DestinationPage />} />{' '}
-        <Route path="/listing" element={<ListingPage />} />{' '}
-        <Route path="/pages" element={<PagesPage />} />{' '}
+        <Route path="/about" element={<AboutPage />} />{' '}
         <Route path="/contact" element={<ContactPage />} />{' '}
       </Routes>
       <Footer />

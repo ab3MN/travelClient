@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@types/react-loader-spinner": "^4.0.0",
     "@types/react-redux": "^7.1.25",
     "@types/react-router": "^5.1.20",

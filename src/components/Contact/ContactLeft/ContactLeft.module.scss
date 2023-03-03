@@ -1,0 +1,38 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+}
+.description {
+  padding-bottom: 40px;
+  border-bottom: 2px dashed #e2e7e6;
+  margin-bottom: 40px;
+}
+.description,
+.phone,
+.email {
+  font-weight: 600;
+  max-width: 470px;
+  color: var(--black-color);
+  font-size: 18px;
+  line-height: 1.5;
+}
+.phone,
+.email {
+  color: #999;
+}
+.phone {
+  padding-bottom: 10px;
+  & span {
+    color: var(--pink-color);
+  }
+}
+
+.email {
+  padding-bottom: 40px;
+  border-bottom: 2px dashed #e2e7e6;
+  & span {
+    color: var(--black-color);
+  }
+  margin-bottom: 20px;
+}
