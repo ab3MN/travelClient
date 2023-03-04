@@ -1,15 +1,23 @@
 import React from 'react';
 import PageHeader from '../../shared/PageHeader/PageHeader';
+import AboutFirstBlock from './AboutFirstBlock/AboutFirstBlock';
+import AboutFourthBlock from './AboutFourthBlock/AboutFourthBlock';
+import AboutSecondBlock from './AboutSecondBlock/AboutSecondBlock';
+import AboutThirdBlock from './AboutThirdBlock/AboutThirdBlock';
 
 const About = () => {
   return (
-    <div>
+    <main>
       <PageHeader
         title="About Us"
         description="We’re Solo Agency"
         backGroundImg="/img/AboutPage/header__bgc.png"
       />
-    </div>
+      <AboutFirstBlock />
+      <AboutSecondBlock />
+      <AboutThirdBlock />
+      <AboutFourthBlock />
+    </main>
   );
 };
 

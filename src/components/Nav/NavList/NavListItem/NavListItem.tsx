@@ -26,7 +26,9 @@ const NavListItem: FC<IProps> = ({ name, data, to }) => {
         }
       >
         {name}
-        {data && <i className="fa fa-arrow-down"></i>}
+        {data && (
+          <i className="fa fa-chevron-down" style={{ fontSize: '8px' }}></i>
+        )}
       </NavLink>
       {isMenuOpen && (
         <ul

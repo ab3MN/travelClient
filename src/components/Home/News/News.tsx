@@ -1,9 +1,9 @@
 import React from 'react';
 import SectionDescription from '../../../shared/titles/SectionDescription/SectionDescription';
 import SectionTitle from '../../../shared/titles/SectionTitle/SectionTitle';
-import NewsList from './NewsList/NewsList';
 import s from './News.module.scss';
 import ViewButton from '../../../shared/Buttons/ViewButton/ViewButton';
+import AboutArticlesList from '../../../shared/Lists/AboutArticlesList/AboutArticlesList';
 
 const newsList = [
   {
@@ -40,7 +40,7 @@ const News = () => {
     <section className={s.news}>
       <SectionTitle text="Latest News" />
       <SectionDescription text="Learn More About Us" />
-      <NewsList data={newsList} />
+      <AboutArticlesList data={newsList} />
       <ViewButton text="READ MORE ARTICLES" />
     </section>
   );

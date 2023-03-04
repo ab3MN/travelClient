@@ -1,24 +1,7 @@
 import React from 'react';
 import ViewButton from '../../../../shared/Buttons/ViewButton/ViewButton';
+import AboutLists from '../../../../shared/Lists/AboutLists/AboutLists';
 import s from './AboutRight.module.scss';
-
-const aboutList = [
-  {
-    img: './img/HomePage/about/about__phone.png',
-    text: 'BOOKING WITH SPREAD PAYMENTS',
-    id: 1,
-  },
-  {
-    img: './img/HomePage/about/about__notebook.png',
-    text: 'SLEEP & TRAVEL IN COMFORT',
-    id: 2,
-  },
-  {
-    img: './img/HomePage/about/about__bed.png',
-    text: 'FULLY LICENSED TOUR OPERATOR',
-    id: 3,
-  },
-];
 
 const AboutRight = () => {
   return (
@@ -30,18 +13,7 @@ const AboutRight = () => {
         that.
       </p>
       <h3 className={s.title}>Why Choose US</h3>
-      <>
-        {aboutList.map(({ img, text, id }) => (
-          <div className={s.description__box} key={id}>
-            <div className={s.description__img_box}>
-              <img src={img} className={s.description__img} alt="phone" />
-            </div>
-            <div className={s.description__text_box}>
-              <span className={s.description__text}>{text} </span>
-            </div>
-          </div>
-        ))}
-      </>
+      <AboutLists />
       <ViewButton text="MORE ABOUT US" />
     </div>
   );

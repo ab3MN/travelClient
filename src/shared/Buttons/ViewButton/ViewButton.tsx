@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 import './ViewButton.scss';
 
 interface IProps {
   text: string;
   style?: any;
+  to?: string;
 }
 
-const ViewButton: FC<IProps> = ({ text, style }) => (
+const ViewButton: FC<IProps> = ({ text, style, to = '#' }) => (
   <button className="view__button" style={style}>
-    {text}
+    <Link to={to}> {text}</Link>
   </button>
 );
 

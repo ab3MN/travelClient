@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import SectionDescription from '../titles/SectionDescription/SectionDescription';
 import SectionTitle from '../titles/SectionTitle/SectionTitle';
 import s from './PageHeader.module.scss';
 
-const PageHeader = ({ title = '', description = '', backGroundImg = '' }) => {
+interface IProps {
+  title: string;
+  description: string;
+  backGroundImg: string;
+}
+
+const PageHeader: FC<IProps> = ({ title, description, backGroundImg }) => {
   return (
     <header
       className={s.header}

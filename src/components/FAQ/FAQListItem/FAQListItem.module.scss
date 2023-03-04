@@ -1,0 +1,46 @@
+.item {
+  width: 570px;
+  padding-bottom: 20px;
+  &:first-child {
+    border-bottom: 2px dashed #eee;
+  }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 570px;
+  padding: 16px 0;
+
+  & i {
+    color: var(--pink-color);
+  }
+  &:focus,
+  &:hover {
+    cursor: pointer;
+  }
+}
+.hide {
+  display: none;
+}
+
+.text {
+  padding-top: 0px;
+  line-height: 1.5;
+  color: rgba(18, 58, 50, 0.5);
+  font-size: 14px;
+  animation: fade-in 0.35s ease-in;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

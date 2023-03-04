@@ -16,10 +16,9 @@ const navPath = [
     ],
   },
   {
-    to: '#',
-    name: 'listing',
+    to: '/news',
+    name: 'News',
     id: 3,
-    data: [{ name: 'Tour listing ', id: 1, to: '/listing' }],
   },
   {
     to: '#',
@@ -28,8 +27,7 @@ const navPath = [
     data: [
       { name: 'About Us', id: 1, to: '/about' },
       { name: 'FAQs', id: 2, to: '/faq' },
-      { name: '404 Page', id: 3, to: '/404page' },
-      { name: 'Blog', id: 4, to: '/blog' },
+      { name: '404 Page', id: 3, to: '/404' },
     ],
   },
   { to: '/contact', name: 'contact us', id: 5 },
