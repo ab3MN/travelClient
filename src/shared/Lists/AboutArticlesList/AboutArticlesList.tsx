@@ -43,4 +43,13 @@ const AboutArticlesList: FC<IProps> = ({ data, style }) => (
   </ul>
 );
 
-export default AboutArticlesList;
+export default React.memo(AboutArticlesList, (next, prev) => {
+  if (next.data.length === prev.data.length) {
+    for (let i = 0; i < next.data.length; i++) {
+      if (next.data[0].location === prev.data[0].location) {
+        return true;
+      }
+    }
+  }
+  return false;
+});

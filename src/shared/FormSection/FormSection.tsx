@@ -9,4 +9,4 @@ const FormSection: FC<IProps> = ({ children }) => {
   return <section className={s.section}>{children}</section>;
 };
 
-export default FormSection;
+export default React.memo(FormSection, () => true);

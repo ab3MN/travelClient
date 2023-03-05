@@ -39,4 +39,4 @@ const MyInput: FC<IProps> = ({
   );
 };
 
-export default MyInput;
+export default React.memo(MyInput, () => true);

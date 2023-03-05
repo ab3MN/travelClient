@@ -14,4 +14,4 @@ const ViewButton: FC<IProps> = ({ text, style, to = '#' }) => (
   </button>
 );
 
-export default ViewButton;
+export default React.memo(ViewButton, () => true);

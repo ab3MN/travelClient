@@ -12,6 +12,11 @@ export const NotFoundPage = lazy(
   () => import('../pages/NotFoundPage/NotFoundPage'),
 );
 
+/* ==================== Listing ==================== */
+export const ListingPage = lazy(
+  () => import('../pages/ListingPage/ListingPage'),
+);
+
 /* ==================== NEWS ==================== */
 export const NewsPage = lazy(() => import('../pages/NewsPage/NewsPage'));
 

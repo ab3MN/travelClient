@@ -7,4 +7,6 @@ const MessageInformer: FC<{ message: string }> = React.memo(
   },
 );
 
-export default MessageInformer;
+export default React.memo(MessageInformer, (next, prev) =>
+  next.message === prev.message ? true : false,
+);

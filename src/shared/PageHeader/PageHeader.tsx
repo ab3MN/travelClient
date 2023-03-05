@@ -50,4 +50,4 @@ const PageHeader: FC<IProps> = ({ title, description, backGroundImg }) => {
   );
 };
 
-export default PageHeader;
+export default React.memo(PageHeader, () => true);

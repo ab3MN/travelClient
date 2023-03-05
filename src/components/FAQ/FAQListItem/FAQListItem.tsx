@@ -19,7 +19,10 @@ const FAQListItem: FC<IProps> = ({ title, text }) => {
           <i className="fa fa-chevron-up" style={{ fontSize: '12px' }}></i>
         )}
       </h5>
-      <div className={isTextVisible ? s.text : s.hide}>{text}</div>
+      <div className={isTextVisible ? s.text : s.hide}>
+        <p> {text}</p>
+        <div className={s.text__box}>{text}</div>
+      </div>
     </article>
   );
 };

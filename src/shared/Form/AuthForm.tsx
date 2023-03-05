@@ -12,4 +12,4 @@ const AuthForm: FC<IProps> = ({ children, onSubmit }) => (
   </form>
 );
 
-export default AuthForm;
+export default React.memo(AuthForm, () => true);

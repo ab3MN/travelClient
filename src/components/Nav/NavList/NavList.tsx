@@ -5,14 +5,14 @@ import NavListItem from './NavListItem/NavListItem';
 const navPath = [
   { to: '/', name: 'home', id: 1 },
   {
-    to: '#',
-    name: 'destination',
+    to: '/listing',
+    name: 'listing',
     id: 2,
     data: [
-      { name: 'Vietnam', id: 1, to: '/vietnam' },
-      { name: 'Thailand', id: 2, to: '/thailand' },
-      { name: 'Cambodia', id: 3, to: '/cambodia' },
-      { name: 'Indonesia', id: 4, to: '/indonesia' },
+      { name: 'Vietnam', id: 1, to: '/listing?location_name=vietnam' },
+      { name: 'Thailand', id: 2, to: '/listing?location_name=thailand' },
+      { name: 'Cambodia', id: 3, to: '/listing?location_name=cambodia' },
+      { name: 'Indonesia', id: 4, to: '/listing?location_name=indonesia' },
     ],
   },
   {

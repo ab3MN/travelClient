@@ -4,31 +4,22 @@
 }
 .select {
   display: block;
-  width: 170px;
+  width: 198px;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
   color: var(--white-color);
   padding: 12px 24px;
   outline: none;
-  border-radius: 20px;
+  border-radius: 40px;
   background-color: #350a4f;
   height: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   &:focus,
   :hover {
     cursor: pointer;
-  }
-}
-.arrow {
-  position: relative;
-  & b::after {
-    position: absolute;
-    content: '\f107';
-    top: -4px;
-    left: 160px;
-    font-family: FontAwesome, sans-serif;
-    font-size: 14px;
-    color: white;
   }
 }
 
@@ -42,7 +33,7 @@
   padding-inline-start: 0;
   border-radius: 20px;
   transition: all 0.35s ease-in-out;
-  width: 218px;
+  width: 198px;
 }
 .item {
   font-weight: 600;

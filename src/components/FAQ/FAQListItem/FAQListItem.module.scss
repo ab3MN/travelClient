@@ -1,7 +1,7 @@
 .item {
   width: 570px;
   padding-bottom: 20px;
-  &:first-child {
+  & {
     border-bottom: 2px dashed #eee;
   }
 }
@@ -30,17 +30,26 @@
 }
 
 .text {
-  padding-top: 0px;
+  position: relative;
   line-height: 1.5;
   color: rgba(18, 58, 50, 0.5);
   font-size: 14px;
-  animation: fade-in 0.35s ease-in;
-}
-@keyframes fade-in {
-  0% {
+
+  & p {
+    position: absolute;
+    animation: ani 1s forwards;
+    padding-bottom: 16px;
+  }
+  &__box {
     opacity: 0;
   }
+}
+
+@keyframes ani {
+  0% {
+    transform: translateY(-20%);
+  }
   100% {
-    opacity: 1;
+    transform: translateY(0);
   }
 }

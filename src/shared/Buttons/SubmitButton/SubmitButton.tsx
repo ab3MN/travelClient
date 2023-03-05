@@ -7,4 +7,4 @@ const SubmitButton = ({ text = '' }) => (
   </button>
 );
 
-export default React.memo(SubmitButton);
+export default React.memo(SubmitButton, () => true);

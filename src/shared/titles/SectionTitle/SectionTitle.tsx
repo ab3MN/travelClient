@@ -12,4 +12,4 @@ const SectionTitle: FC<ISectionTitileProps> = ({ text, style }) => (
   </h4>
 );
 
-export default SectionTitle;
+export default React.memo(SectionTitle, () => true);

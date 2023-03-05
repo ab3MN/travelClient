@@ -33,4 +33,4 @@ const AboutLists = () => (
   </div>
 );
 
-export default AboutLists;
+export default React.memo(AboutLists, () => true);

@@ -11,4 +11,4 @@ const LinkButton: FC<IProps> = ({ text, callback }) => (
   </button>
 );
 
-export default LinkButton;
+export default React.memo(LinkButton, () => true);

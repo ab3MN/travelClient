@@ -45,4 +45,4 @@ const SocialIcons: FC<IProps> = ({ style, imgWidth, imgHeight }) => (
   </div>
 );
 
-export default SocialIcons;
+export default React.memo(SocialIcons, () => true);

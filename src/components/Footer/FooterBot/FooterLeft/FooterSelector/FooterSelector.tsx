@@ -26,10 +26,8 @@ const FooterSelector = () => {
         aria-readonly="true"
         onClick={() => setSelectorOpen(!isSelectorOpen)}
       >
-        <span style={{ width: '100px', display: 'block' }}> {currency}</span>
-        <span className={s.arrow}>
-          <b role="presentation"></b>
-        </span>
+        <span style={{ width: '100px', display: 'block' }}> {currency}</span>{' '}
+        <i className="fa fa-chevron-down" style={{ fontSize: '10px' }}></i>
       </span>
       {isSelectorOpen && (
         <ul className={s.list}>

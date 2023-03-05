@@ -10,4 +10,4 @@ const ArticleTitle: FC<IProps> = ({ title, style }) => (
     {title}
   </h3>
 );
-export default ArticleTitle;
+export default React.memo(ArticleTitle, () => true);

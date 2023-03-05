@@ -12,4 +12,4 @@ const SectionDescription: FC<IProps> = ({ text, style }) => (
   </h3>
 );
 
-export default SectionDescription;
+export default React.memo(SectionDescription, () => true);

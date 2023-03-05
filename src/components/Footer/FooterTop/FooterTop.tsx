@@ -3,6 +3,8 @@ import PressButton from '../../../shared/Buttons/PressButton/PressButton';
 import s from './FooterTop.module.scss';
 
 const FooterTop = () => {
+  console.log('aaa');
+
   return (
     <article className={s.top}>
       <form className={s.form}>
